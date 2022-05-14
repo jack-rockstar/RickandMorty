@@ -1,17 +1,22 @@
 .App {
   text-align: center;
+  padding: 20px;
+
+}
+body {
+  font-family: sans-serif;
+  background: #C2C1C1;
+}
+.logo{
+  background-image: url("../public/rickmorty.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width:100%;
+  height: 200px;
+  margin: auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
 .App-header {
   background-color: #282c34;
@@ -22,6 +27,18 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+input{
+  width:300px;
+}
+
+.error{
+  background-image: url('https://fondosmil.com/fondo/27373.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  
+
 }
 
 .App-link {
