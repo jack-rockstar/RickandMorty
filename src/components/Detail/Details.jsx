@@ -16,6 +16,7 @@ const h1 = {
 const a = {
     fontWeight: 'bold',
     textDecoration: 'none',
+    color:'#ffff'
 }
 export default function Details({ image, name, id, species, status, location }) {
 
