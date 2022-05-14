@@ -34,11 +34,12 @@ const styleSelect={
 
 }
 
-export default function Forms() {
+ function Forms({onSubmit}) {
     const [keyword, setKeyword] = useState('')
-    const [path, pushLocation] = useLocation()
     const handleSubmit = (e) => {
         e.preventDefault()
+
+
         let estado=document.getElementById('estado').value
         let especie=document.getElementById('especie').value
         let data={
@@ -46,8 +47,9 @@ export default function Forms() {
             estado:estado,
             especie:especie
         }
-        //navegar otra ruta
-        pushLocation(`/search/${data.keyword}&status=${data.estado}&species=${data.especie}`)
+        // //navegar otra ruta
+        // pushLocation(`/search/${data.keyword}&status=${data.estado}&species=${data.especie}`)
+        onSubmit({data})
 
     }
     const handleChange = (e) => {
@@ -78,3 +80,5 @@ export default function Forms() {
     )
 
 }
+
+export default React.memo(Forms)
